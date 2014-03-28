@@ -26,6 +26,8 @@ new_name = raw_input('Insert new project name: ')
 new_name = new_name[0].upper() + new_name[1:]
 
 os.rename('./' + old_name + '.pro', './' + new_name + '.pro')
+os.rename('./translations/' + old_name + '.pro', './translations/' + new_name + '.pro')
+os.rename('./translations/' + old_name + '.ts', './translations/' + new_name + '.ts')
 
 def changeProjectName(arg, dir_name, file_names):
     for file_name in file_names:
